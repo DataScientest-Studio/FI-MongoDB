@@ -1,0 +1,29 @@
+docker run mongo:latest
+
+docker run -d mongo:latest 
+
+docker run -p 27017:27017 --name my_mongo mongo:latest 
+
+docker exec -it my_mongo bash 
+
+mongosh 
+
+show dbs command 
+
+use sample 
+
+show collections 
+
+exit 
+
+docker-compose up -d
+
+docker exec -it my_mongo bash 
+
+mongoimport -d sample -c zips --file data/db/zips.json
+
+use sample 
+
+show collections
+
+db.zips.findOne()
